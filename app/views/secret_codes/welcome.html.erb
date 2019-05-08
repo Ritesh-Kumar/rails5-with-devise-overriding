@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="jumbotron">
+    <% unless user_signed_in? %>
+    <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <% end %>
+
+    <h4> Welcome to Home Screen</h4>
+    <p class="text-primary">Generate Secret Code Project with details implemented as per below guidelines:</p>
+    <ul>
+      <li>
+        <p>Create a clean ruby on rails application using twitter bootstrap. - Done
+        </p>
+      </li>
+      <li>
+        <p> Create User model with fields first, last, email. - Done
+        </p>
+      </li>
+      <li>
+        <p> Install and setup devise gem to use the User model for auth (email used as a user name). - Done
+        </p>
+      </li>
+      <li>
+        <p> Generate devise views via rake command - Done
+        </p>
+      </li>
+
+    </ul>
+
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Read Complete Guidelines ...</button>
+    <div id="demo" class="collapse">
+      <ul>
+        <li>
+          <p> On the register new user view add a new text field called Secret Code. - Done
+          </p>
+        </li>
+        <li>
+          <p> Restrict user registration so a hard coded secret code must be entered, eg. 'foobar'. - Done
+          </p>
+        </li>
+        <li>
+          <p> Create a new user with seeds called 'admin' - Done
+          </p>
+        </li>
+        <li>
+          <p> Create a controller/model SecretCode (1-to-1 relationship to Users which can be null, plus code string and usual created/updated). - Done
+          </p>
+        </li>
+        <li>
+          <p> The controller needs to provide a view and actions to generate a number of secret codes. - Done
+          </p>
+        </li>
+        <li>
+          <p> Index page shows secret codes available, and the associated user email address for ones that have an association. - Done
+          </p>
+        </li>
+        <li>
+          <p> Index page also has a button to generate more secret code models which by default have no associated user and a randomly generated secret code (some short hash or guid).- Done
+          </p>
+        </li>
+        <li>
+          <p> The index page also has a drop down filled with 1, 10, 20, 50, 100 which determines how many secret codes to generate (default selection on drop down is 10).  - Done
+          </p>
+        </li>
+        <li>
+          <p> link secret code field on user registration page to only allow available secret code models (one with no current user associated). - Done
+          </p>
+        </li>
+        <li>
+          <p> registering a user will create association between user and the valid secret code they used. - Done
+          </p>
+        </li>
+        <li>
+          <p> secret code index page should show user email address for a secret code after they use it for registration in a table next to the code. - Done
+          </p>
+        </li>
+        <li>
+          <p> setup CanCan ACL gem. - Done
+          </p>
+        </li>
+        <li>
+          <p> create a role called :admin and manually in DB associate it with the admin user created manually earlier (no UI needed for this config). - Done
+          </p>
+        </li>
+        <li>
+          <p> configure so that SecretCode page link and entire controller is only accessible to :admin role users. - Done </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
